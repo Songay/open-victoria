@@ -3,6 +3,22 @@
     <head>
         <meta charset="utf-8" />
         <style type="text/css">
+        	body.black{
+		    background-color: black;
+		    color:white;
+			}
+			body.black a{
+			    color:white;
+			}
+			body.black a:hover{
+			    color:#f60;
+			}
+			body.black header{
+			    border-bottom:1px solid #333;
+			}
+			body.black nav {
+			    border-right: 1px solid #333;
+			}
             body {
                 font-size: 0.8em;
                 font-family: dotum;
@@ -45,14 +61,14 @@
         </style>
     </head>
  
-    <body>
+    <body id='body'>    	
         <div>
             <header>
                 <h1>JavaScript</h1>
             </header>
             <div id="toolbar">
-                <input type="button" value="black" />
-                <input type="button" value="white" />
+                <input type="button" value="black" onclick="document.getElementById('body').className='black'" />
+                <input type="button" value="white" onclick="document.getElementById('body').className='white'"/>
             </div>
             <nav>
                 <ul>
